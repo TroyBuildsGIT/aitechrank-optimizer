@@ -88,60 +88,26 @@ export default function OptimizedDemo() {
               </div>
             </div>
 
-            {/* Right Column - Social Proof */}
+            {/* Right Column - Visual Dashboard Preview */}
             <div className="relative">
-              <Card className="shadow-2xl">
-                <CardHeader className="bg-gradient-to-r from-green-50 to-blue-50">
-                  <div className="flex items-center justify-between">
-                    <CardTitle>Evaluation Complete</CardTitle>
-                    <Badge className="bg-green-600 text-white">Score: 92/100</Badge>
-                  </div>
-                </CardHeader>
-                <CardContent className="pt-6">
-                  <div className="space-y-4">
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium">Performance</span>
-                        <span className="text-sm font-bold">18/20</span>
-                      </div>
-                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-green-600" style={{ width: '90%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium">Content Quality</span>
-                        <span className="text-sm font-bold">23/25</span>
-                      </div>
-                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-green-600" style={{ width: '92%' }}></div>
-                      </div>
-                    </div>
-                    <div>
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-medium">Conversion</span>
-                        <span className="text-sm font-bold">19/20</span>
-                      </div>
-                      <div className="h-2 bg-gray-200 rounded-full overflow-hidden">
-                        <div className="h-full bg-green-600" style={{ width: '95%' }}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-6 p-4 bg-green-50 rounded-lg">
-                    <p className="text-sm font-medium text-green-800">
-                      ✓ Excellent! Your page is highly optimized for conversions.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/20">
+                <img 
+                  src="/dashboard-preview.jpg" 
+                  alt="AI Optimization Dashboard showing scores and analytics"
+                  className="w-full h-auto"
+                />
+                <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold shadow-lg">
+                  Score: 92/100
+                </div>
+              </div>
 
               {/* Floating Trust Badge */}
               <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-lg shadow-xl border">
                 <div className="flex items-center gap-3">
                   <div className="flex -space-x-2">
-                    <div className="w-8 h-8 rounded-full bg-purple-200 border-2 border-white"></div>
-                    <div className="w-8 h-8 rounded-full bg-blue-200 border-2 border-white"></div>
-                    <div className="w-8 h-8 rounded-full bg-pink-200 border-2 border-white"></div>
+                    <div className="w-8 h-8 rounded-full bg-purple-200 border-2 border-white flex items-center justify-center text-xs font-bold">M</div>
+                    <div className="w-8 h-8 rounded-full bg-blue-200 border-2 border-white flex items-center justify-center text-xs font-bold">C</div>
+                    <div className="w-8 h-8 rounded-full bg-pink-200 border-2 border-white flex items-center justify-center text-xs font-bold">G</div>
                   </div>
                   <div className="text-sm">
                     <div className="font-bold">1,247+</div>
