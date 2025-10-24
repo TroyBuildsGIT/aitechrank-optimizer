@@ -22,12 +22,12 @@ export default function Home() {
           <p className="text-lg mb-12 text-white/80 max-w-3xl mx-auto">
             Built for AI agents like Manus and Claude to iteratively optimize homepages, landing pages, and Airbnb listings using comprehensive scoring and actionable recommendations.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" className="bg-white text-purple-600 hover:bg-white/90">
               <Link href="/evaluate">Start Optimizing</Link>
             </Button>
             <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-              <Link href="/history">View History</Link>
+              <Link href="/optimized-demo">See Optimized Example</Link>
             </Button>
           </div>
         </div>
