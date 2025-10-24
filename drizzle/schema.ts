@@ -25,4 +25,26 @@ export const users = mysqlTable("users", {
 export type User = typeof users.$inferSelect;
 export type InsertUser = typeof users.$inferInsert;
 
-// TODO: Add your tables here
+/**
+ * Evaluations table - stores all page evaluations
+ */
+export const evaluations = mysqlTable("evaluations", {
+  id: int("id").autoincrement().primaryKey(),
+  userId: int("userId"),
+  url: text("url").notNull(),
+  pageType: mysqlEnum("pageType", ["homepage", "airbnb", "landing"]).notNull(),
+  overallScore: int("overallScore").notNull(),
+  performanceScore: int("performanceScore").notNull(),
+  contentScore: int("contentScore").notNull(),
+  designScore: int("designScore").notNull(),
+  conversionScore: int("conversionScore").notNull(),
+  completenessScore: int("completenessScore").notNull(),
+  issues: text("issues").notNull(), // JSON array
+  strengths: text("strengths").notNull(), // JSON array
+  recommendations: text("recommendations").notNull(), // JSON array
+  screenshotUrl: text("screenshotUrl"),
+  createdAt: timestamp("createdAt").defaultNow().notNull(),
+});
+
+export type Evaluation = typeof evaluations.$inferSelect;
+export type InsertEvaluation = typeof evaluations.$inferInsert;
